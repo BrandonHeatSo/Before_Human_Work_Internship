@@ -1,2 +1,17 @@
 <h1>hello world</h1>
+
+<br>
 <p>Find me in app/views/home/top.html.erb</p>
+
+<br>
+<%= link_to "sign_up", new_user_registration_path %>
+<br>
+<br>
+<%= link_to "sign_in", new_user_session_path %>
+<br>
+<br>
+<%= link_to "sign_out", destroy_user_session_path, method: :delete %>
+
+<br>
+<br>
+<%= link_to "letter_opener_web", letter_opener_web_path %>
