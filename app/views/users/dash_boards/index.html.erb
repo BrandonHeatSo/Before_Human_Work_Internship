@@ -1,13 +1,13 @@
 <div class="container text-center">
-  <div class="row">
-    <div class="col-15 me-auto">
+  <div class="row mt-4">
+    <div class="col-6 mx-auto">
       <h1>Dash Boards</h1>
       <h2><%= current_user.name %></h2>
 
       <% if user_signed_in? %>
-        <div class="d-grid col-3 mx-auto">
-          <%= link_to "Edit", edit_user_registration_path, class: "btn btn-primary" %>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-warning" %>
+        <div class="d-grid col-8 mx-auto">
+          <%= link_to t('.registrations_edit'), edit_user_registration_path, class: "btn btn-primary" %>
+          <%= link_to t('.sign_out'), destroy_user_session_path, method: :delete, class: "btn btn-warning" %>
         </div>
       <% end %>
     </div>
