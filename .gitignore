@@ -38,3 +38,6 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Ignore vendor\bundle\ruby\3.0.0
+vendor/bundle
