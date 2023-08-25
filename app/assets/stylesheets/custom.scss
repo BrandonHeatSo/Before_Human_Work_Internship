@@ -1,0 +1,11 @@
+@import "bootstrap/scss/bootstrap";
+
+/* フォーム要素の枠線色を黒に変更 */
+.form-control {
+  border-color: black !important;
+}
+
+/* チェックボックスの枠線色を黒に変更 */
+.form-check-input {
+  border-color: black !important;
+}
