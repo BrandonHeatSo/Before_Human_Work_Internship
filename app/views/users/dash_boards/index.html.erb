@@ -4,9 +4,13 @@
       <h1>Dash Boards</h1>
       <h2><%= current_user.name %></h2>
 
+      <br>
       <% if user_signed_in? %>
-        <div class="d-grid col-8 mx-auto">
+        <div class="actions d-grid col-8 mx-auto">
+          <%= link_to "記事一覧", users_articles_path, class: "btn btn-primary" %>
+          <br>
           <%= link_to t('.registrations_edit'), edit_user_registration_path, class: "btn btn-primary" %>
+          <br>
           <%= link_to t('.sign_out'), destroy_user_session_path, method: :delete, class: "btn btn-warning" %>
         </div>
       <% end %>

@@ -41,3 +41,6 @@ yarn-debug.log*
 
 # Ignore vendor\bundle\ruby\3.0.0
 vendor/bundle
+
+# Ignore public\uploads\tmp
+public/uploads
