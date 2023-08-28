@@ -274,6 +274,7 @@ DEPENDENCIES
   devise-i18n-views
   jbuilder (~> 2.7)
   letter_opener_web
+  mini_magick
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.7)

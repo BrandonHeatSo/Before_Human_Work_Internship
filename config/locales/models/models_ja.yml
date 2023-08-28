@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    models:
+      article: 記事
+    attributes:
+        article:
+          id: ID
+          title: タイトル
+          content: 内容
+          image: 画像
+          created_at: 作成日
+          updated_at: 更新日
+          

@@ -10,6 +10,16 @@ Rails.application.routes.draw do
 
   # /users/dash_boards へのルートを追加
   get '/users/dash_boards', to: 'users/dash_boards#index', as: 'users_dash_boards'
+
+  # Users::ArticleControllerのルーティング➀
+  namespace :users do
+    resources :articles # resourcesメソッドを使ってCRUDアクションをまとめて設定
+  end
+
+  # Users::ArticleControllerのルーティング➁
+  # resource :users do
+    # resources :articles # resourcesメソッドを使ってCRUDアクションをまとめて設定
+  # end
   
   # root 'home#top'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

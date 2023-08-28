@@ -1,0 +1,38 @@
+<div class="container text-center">
+  <h2>記事一覧</h2>
+
+  <div class="actions d-grid col-6 mx-auto">
+    <%= link_to "記事新規作成", new_users_article_path, class: "btn btn-primary" %>
+  </div>
+
+  <div class="row">
+    <table class="table">
+      <thead style="border-bottom: 2px solid black;">
+        <tr>
+          <th>詳細表示</th>
+          <th>タイトル</th>
+          <th>内容</th>
+          <th>画像</th>
+          <th>編集・削除</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @articles.each do |article| %>
+          <tr>
+            <td><%= link_to "詳細", users_article_path(article), class: "btn btn-primary" %></td>
+            <td><%= article.title %></td>
+            <td><%= article.content %></td>
+            <td><%= image_tag article.image.url(:thumb) if article.image.present? %></td>
+            <td>
+              <%= link_to "編集", edit_users_article_path(article), class: "btn btn-success" %>
+              <%= link_to "削除", users_article_path(article), method: :delete, data: { confirm: "本当に削除しますか？" },class: "btn btn-danger" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="text-start">
+    <%= link_to "戻る", users_dash_boards_path %>
+  </div>
+</div>
